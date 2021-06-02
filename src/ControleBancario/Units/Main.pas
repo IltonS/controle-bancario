@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, System.Actions, Vcl.ActnList,
   System.ImageList, Vcl.ImgList, Vcl.Menus,
   Vcl.ActnMan, Vcl.StdStyleActnCtrls, Vcl.ToolWin, Vcl.ComCtrls, Vcl.ActnCtrls,
-  Vcl.ExtCtrls;
+  Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons;
 
 type
   TFrmMain = class(TForm)
@@ -93,7 +93,45 @@ type
     N2: TMenuItem;
     SobreItem: TMenuItem;
     UIIcons16: TImageList;
-    ActionToolBar1: TActionToolBar;
+    ActionToolBar: TActionToolBar;
+    CategoryPanelGroup: TCategoryPanelGroup;
+    CPNovoRegistro: TCategoryPanel;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+    SpeedButton5: TSpeedButton;
+    CPExibirRegistro: TCategoryPanel;
+    SpeedButton6: TSpeedButton;
+    SpeedButton7: TSpeedButton;
+    SpeedButton8: TSpeedButton;
+    CPTransacoes: TCategoryPanel;
+    SpeedButton9: TSpeedButton;
+    SpeedButton10: TSpeedButton;
+    SpeedButton11: TSpeedButton;
+    SpeedButton12: TSpeedButton;
+    SpeedButton13: TSpeedButton;
+    CPCartoes: TCategoryPanel;
+    SpeedButton14: TSpeedButton;
+    SpeedButton15: TSpeedButton;
+    SpeedButton16: TSpeedButton;
+    CPContas: TCategoryPanel;
+    SpeedButton17: TSpeedButton;
+    SpeedButton18: TSpeedButton;
+    SpeedButton19: TSpeedButton;
+    CPRelatorios: TCategoryPanel;
+    SpeedButton20: TSpeedButton;
+    SpeedButton21: TSpeedButton;
+    SpeedButton22: TSpeedButton;
+    SpeedButton23: TSpeedButton;
+    SpeedButton24: TSpeedButton;
+    SpeedButton25: TSpeedButton;
+    SpeedButton26: TSpeedButton;
+    SpeedButton27: TSpeedButton;
+    CPOrcamentos: TCategoryPanel;
+    SpeedButton28: TSpeedButton;
+    SpeedButton29: TSpeedButton;
+    StatusBar: TStatusBar;
     procedure Sair(Sender: TObject);
     procedure NovaTransferencia(Sender: TObject);
     procedure Calculadora(Sender: TObject);

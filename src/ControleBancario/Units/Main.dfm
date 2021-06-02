@@ -2543,21 +2543,19 @@ object FrmMain: TFrmMain
   WindowState = wsMaximized
   PixelsPerInch = 96
   TextHeight = 13
-  object ActionToolBar1: TActionToolBar
+  object ActionToolBar: TActionToolBar
     Left = 0
     Top = 0
     Width = 1065
-    Height = 34
+    Height = 36
     ActionManager = ActionManager
     Caption = 'ActionToolBar'
-    Color = clMenuBar
-    ColorMap.DisabledFontColor = 7171437
-    ColorMap.HighlightColor = clWhite
-    ColorMap.BtnSelectedFont = clBlack
+    ColorMap.HighlightColor = clBtnHighlight
     ColorMap.UnusedColor = clWhite
+    ColorMap.MenuColor = clMenu
     EdgeBorders = [ebLeft, ebTop, ebBottom]
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clBlack
+    Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
@@ -2565,13 +2563,374 @@ object FrmMain: TFrmMain
     ParentShowHint = False
     ShowHint = True
     Spacing = 0
+    ExplicitHeight = 34
+  end
+  object CategoryPanelGroup: TCategoryPanelGroup
+    Left = 0
+    Top = 36
+    Width = 241
+    Height = 335
+    VertScrollBar.Tracking = True
+    BevelEdges = [beRight]
+    BevelInner = bvNone
+    BevelOuter = bvRaised
+    BevelKind = bkTile
+    Color = clWhite
+    Ctl3D = True
+    HeaderFont.Charset = DEFAULT_CHARSET
+    HeaderFont.Color = clWindowText
+    HeaderFont.Height = -11
+    HeaderFont.Name = 'Tahoma'
+    HeaderFont.Style = []
+    Images = UIIcons24
+    ParentCtl3D = False
+    TabOrder = 1
+    object CPOrcamentos: TCategoryPanel
+      Top = 476
+      Height = 30
+      Caption = 'Or'#231'amentos'
+      Color = clWhite
+      Collapsed = True
+      TabOrder = 0
+      ExplicitTop = 180
+      ExplicitWidth = 238
+      ExpandedHeight = 107
+      object SpeedButton28: TSpeedButton
+        Left = 2
+        Top = 6
+        Width = 127
+        Height = 31
+        Action = ExibirOrcamentosCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton29: TSpeedButton
+        Left = 2
+        Top = 43
+        Width = 140
+        Height = 31
+        Action = AnalisarOrcamentosCmd
+        Flat = True
+        Transparent = False
+      end
+    end
+    object CPRelatorios: TCategoryPanel
+      Top = 446
+      Height = 30
+      Caption = 'Relat'#243'rios'
+      Color = clWhite
+      Collapsed = True
+      TabOrder = 1
+      ExplicitTop = 150
+      ExpandedHeight = 333
+      object SpeedButton20: TSpeedButton
+        Left = 2
+        Top = 8
+        Width = 115
+        Height = 31
+        Action = ReceitaMensalCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton21: TSpeedButton
+        Left = 2
+        Top = 45
+        Width = 120
+        Height = 31
+        Action = DespesaMensalCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton22: TSpeedButton
+        Left = 2
+        Top = 82
+        Width = 151
+        Height = 31
+        Action = ReceitasPorCategoriaCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton23: TSpeedButton
+        Left = 2
+        Top = 119
+        Width = 157
+        Height = 31
+        Action = DespesasPorCategoriaCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton24: TSpeedButton
+        Left = 2
+        Top = 156
+        Width = 135
+        Height = 31
+        Action = ReceitasPorContaCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton25: TSpeedButton
+        Left = 2
+        Top = 193
+        Width = 140
+        Height = 31
+        Action = DespesasPorContaCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton26: TSpeedButton
+        Left = 2
+        Top = 230
+        Width = 111
+        Height = 31
+        Action = ReceitaAnualCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton27: TSpeedButton
+        Left = 2
+        Top = 267
+        Width = 115
+        Height = 31
+        Action = DespesaAnualCmd
+        Flat = True
+        Transparent = False
+      end
+    end
+    object CPContas: TCategoryPanel
+      Top = 416
+      Height = 30
+      Caption = 'Contas'
+      Color = clWhite
+      Collapsed = True
+      TabOrder = 2
+      ExplicitTop = 120
+      ExpandedHeight = 137
+      object SpeedButton17: TSpeedButton
+        Left = 2
+        Top = 1
+        Width = 111
+        Height = 31
+        Action = ExibirContasCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton18: TSpeedButton
+        Left = 2
+        Top = 38
+        Width = 103
+        Height = 31
+        Action = NovaContaCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton19: TSpeedButton
+        Left = 2
+        Top = 75
+        Width = 127
+        Height = 31
+        Action = TiposDeContasCmd
+        Flat = True
+        Transparent = False
+      end
+    end
+    object CPCartoes: TCategoryPanel
+      Top = 386
+      Height = 30
+      Caption = 'Cart'#245'es'
+      Color = clWhite
+      Collapsed = True
+      TabOrder = 3
+      ExplicitTop = 90
+      ExpandedHeight = 144
+      object SpeedButton14: TSpeedButton
+        Left = 2
+        Top = 3
+        Width = 111
+        Height = 31
+        Action = ExibirCartoesCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton15: TSpeedButton
+        Left = 2
+        Top = 40
+        Width = 157
+        Height = 31
+        Action = NovoCartaoDeCreditoCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton16: TSpeedButton
+        Left = 2
+        Top = 77
+        Width = 95
+        Height = 31
+        Action = BandeirasCmd
+        Flat = True
+        Transparent = False
+      end
+    end
+    object CPTransacoes: TCategoryPanel
+      Top = 356
+      Height = 30
+      Caption = 'Transa'#231#245'es'
+      Color = clWhite
+      Collapsed = True
+      TabOrder = 4
+      ExplicitTop = 60
+      ExpandedHeight = 213
+      object SpeedButton9: TSpeedButton
+        Left = 2
+        Top = 4
+        Width = 127
+        Height = 31
+        Action = ExibirTransacoesCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton10: TSpeedButton
+        Left = 2
+        Top = 41
+        Width = 135
+        Height = 31
+        Action = NovaTransferenciaCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton11: TSpeedButton
+        Left = 2
+        Top = 75
+        Width = 157
+        Height = 31
+        Action = NovaDespesaReceitaCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton12: TSpeedButton
+        Left = 2
+        Top = 112
+        Width = 223
+        Height = 31
+        Action = NovaDespesaEmCartaoDeCreditoCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton13: TSpeedButton
+        Left = 2
+        Top = 149
+        Width = 103
+        Height = 31
+        Action = CategoriasCmd
+        Flat = True
+        Transparent = False
+      end
+    end
+    object CPExibirRegistro: TCategoryPanel
+      Top = 225
+      Height = 131
+      Caption = 'Exibir Registro'
+      Color = clWhite
+      TabOrder = 5
+      ExplicitTop = 30
+      ExplicitWidth = 238
+      object SpeedButton6: TSpeedButton
+        Left = -1
+        Top = 0
+        Width = 130
+        Height = 31
+        Action = ExibirTransacoesCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton7: TSpeedButton
+        Left = -1
+        Top = 32
+        Width = 114
+        Height = 31
+        Action = ExibirCartoesCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton8: TSpeedButton
+        Left = -1
+        Top = 69
+        Width = 114
+        Height = 31
+        Action = ExibirContasCmd
+        Flat = True
+        Transparent = False
+      end
+    end
+    object CPNovoRegistro: TCategoryPanel
+      Top = 0
+      Height = 225
+      Caption = 'Novo Registro'
+      Color = clWhite
+      TabOrder = 6
+      ExplicitWidth = 238
+      object SpeedButton1: TSpeedButton
+        Left = -1
+        Top = 4
+        Width = 138
+        Height = 31
+        Action = NovaTransferenciaCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton2: TSpeedButton
+        Left = -1
+        Top = 41
+        Width = 154
+        Height = 31
+        Action = NovaDespesaReceitaCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton3: TSpeedButton
+        Left = -1
+        Top = 78
+        Width = 218
+        Height = 31
+        Action = NovaDespesaEmCartaoDeCreditoCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton4: TSpeedButton
+        Left = -1
+        Top = 115
+        Width = 154
+        Height = 31
+        Action = NovoCartaoDeCreditoCmd
+        Flat = True
+        Transparent = False
+      end
+      object SpeedButton5: TSpeedButton
+        Left = -1
+        Top = 152
+        Width = 98
+        Height = 31
+        Action = NovaContaCmd
+        Flat = True
+        Transparent = False
+      end
+    end
+  end
+  object StatusBar: TStatusBar
+    Left = 0
+    Top = 371
+    Width = 1065
+    Height = 19
+    Panels = <>
+    ExplicitLeft = 400
+    ExplicitTop = 216
+    ExplicitWidth = 0
   end
   object UIIcons24: TImageList
     ColorDepth = cd32Bit
     DrawingStyle = dsTransparent
     Height = 24
     Width = 24
-    Left = 24
+    Left = 344
     Top = 56
     Bitmap = {
       494C010113001800040018001800FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
@@ -4192,11 +4551,11 @@ object FrmMain: TFrmMain
             ShowCaption = False
             ShortCut = 112
           end>
-        ActionBar = ActionToolBar1
+        ActionBar = ActionToolBar
       end>
     Images = UIIcons24
-    Left = 32
-    Top = 168
+    Left = 416
+    Top = 56
     StyleName = 'Standard'
     object ResumoFinanceiroCmd: TAction
       Category = 'Arquivo'
@@ -4421,9 +4780,8 @@ object FrmMain: TFrmMain
   end
   object MainMenu: TMainMenu
     Images = UIIcons16
-    OwnerDraw = True
-    Left = 32
-    Top = 224
+    Left = 488
+    Top = 56
     object Arquivo1: TMenuItem
       Caption = '&Arquivo'
       object ResumoFinanceiroItem: TMenuItem
@@ -4563,8 +4921,8 @@ object FrmMain: TFrmMain
   object UIIcons16: TImageList
     ColorDepth = cd32Bit
     DrawingStyle = dsTransparent
-    Left = 24
-    Top = 112
+    Left = 272
+    Top = 56
     Bitmap = {
       494C010113001800040010001000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000005000000001002000000000000050
