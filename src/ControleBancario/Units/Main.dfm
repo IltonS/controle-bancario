@@ -4,7 +4,7 @@ object FrmMain: TFrmMain
   Caption = 'Controle Banc'#225'rio'
   ClientHeight = 390
   ClientWidth = 1065
-  Color = clBtnFace
+  Color = clAppWorkSpace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -2543,13 +2543,36 @@ object FrmMain: TFrmMain
   WindowState = wsMaximized
   PixelsPerInch = 96
   TextHeight = 13
+  object ActionToolBar1: TActionToolBar
+    Left = 0
+    Top = 0
+    Width = 1065
+    Height = 34
+    ActionManager = ActionManager
+    Caption = 'ActionToolBar'
+    Color = clMenuBar
+    ColorMap.DisabledFontColor = 7171437
+    ColorMap.HighlightColor = clWhite
+    ColorMap.BtnSelectedFont = clBlack
+    ColorMap.UnusedColor = clWhite
+    EdgeBorders = [ebLeft, ebTop, ebBottom]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    Spacing = 0
+  end
   object UIIcons24: TImageList
     ColorDepth = cd32Bit
     DrawingStyle = dsTransparent
     Height = 24
     Width = 24
-    Left = 32
-    Top = 48
+    Left = 24
+    Top = 56
     Bitmap = {
       494C010113001800040018001800FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       00000000000036000000280000006000000078000000010020000000000000B4
@@ -4046,6 +4069,130 @@ object FrmMain: TFrmMain
   object ActionManager: TActionManager
     ActionBars = <
       item
+      end
+      item
+      end
+      item
+        Items = <
+          item
+            Caption = '-'
+          end
+          item
+            Action = ResumoFinanceiroCmd
+            ImageIndex = 17
+            ShowCaption = False
+            ShortCut = 8274
+          end
+          item
+            Caption = '-'
+          end
+          item
+            Action = ExibirTransacoesCmd
+            ImageIndex = 9
+            ShowCaption = False
+            ShortCut = 8276
+          end
+          item
+            Action = NovaTransferenciaCmd
+            ImageIndex = 14
+            ShowCaption = False
+            ShortCut = 24660
+          end
+          item
+            Action = NovaDespesaReceitaCmd
+            ImageIndex = 13
+            ShowCaption = False
+            ShortCut = 24644
+          end
+          item
+            Action = NovaDespesaEmCartaoDeCreditoCmd
+            ImageIndex = 12
+            ShowCaption = False
+            ShortCut = 24643
+          end
+          item
+            Caption = '-'
+          end
+          item
+            Action = ExibirCartoesCmd
+            Caption = 'E&xibir Cart'#245'es'
+            ImageIndex = 6
+            ShowCaption = False
+            ShortCut = 8259
+          end
+          item
+            Action = NovoCartaoDeCreditoCmd
+            ImageIndex = 15
+            ShowCaption = False
+            ShortCut = 41027
+          end
+          item
+            Caption = '-'
+          end
+          item
+            Action = ExibirContasCmd
+            Caption = 'Ex&ibir Contas'
+            ImageIndex = 7
+            ShowCaption = False
+            ShortCut = 8270
+          end
+          item
+            Action = NovaContaCmd
+            Caption = 'N&ova Conta'
+            ImageIndex = 11
+            ShowCaption = False
+            ShortCut = 41038
+          end
+          item
+            Caption = '-'
+          end
+          item
+            Action = ExibirOrcamentosCmd
+            Caption = 'Exi&bir Or'#231'amentos'
+            ImageIndex = 8
+            ShowCaption = False
+            ShortCut = 24655
+          end
+          item
+            Action = AnalisarOrcamentosCmd
+            ImageIndex = 1
+            ShowCaption = False
+            ShortCut = 8271
+          end
+          item
+            Caption = '-'
+          end
+          item
+            Action = CalculadoraCmd
+            Caption = 'Ca&lculadora'
+            ImageIndex = 3
+            ShowCaption = False
+            ShortCut = 113
+          end
+          item
+            Action = CalendarioCmd
+            Caption = 'Calend'#225'rio'
+            ImageIndex = 4
+            ShowCaption = False
+            ShortCut = 114
+          end
+          item
+            Action = NavegadorCmd
+            Caption = 'Na&vegador'
+            ImageIndex = 10
+            ShowCaption = False
+            ShortCut = 115
+          end
+          item
+            Caption = '-'
+          end
+          item
+            Action = TopicosDaAjudaCmd
+            ImageIndex = 0
+            ShowCaption = False
+            ShortCut = 112
+          end>
+        ActionBar = ActionToolBar1
       end>
     Images = UIIcons24
     Left = 32
@@ -4074,12 +4221,14 @@ object FrmMain: TFrmMain
       Caption = '&Categorias'
       Hint = 'Controle das categorias das transa'#231#245'es do sistema.'
       ImageIndex = 5
+      OnExecute = Categorias
     end
     object BandeirasCmd: TAction
       Category = 'Arquivo'
       Caption = '&Bandeiras'
       Hint = 'Controle das bandeiras de cart'#245'es de cr'#233'dito do sistema.'
       ImageIndex = 2
+      OnExecute = Bandeiras
     end
     object TiposDeContasCmd: TAction
       Category = 'Arquivo'
@@ -4119,6 +4268,7 @@ object FrmMain: TFrmMain
       Hint = 'Cadastro de despesas e receitas em uma conta.'
       ImageIndex = 13
       ShortCut = 24644
+      OnExecute = NovaDespesaReceita
     end
     object NovaDespesaEmCartaoDeCreditoCmd: TAction
       Category = 'Transacoes'
@@ -4126,6 +4276,7 @@ object FrmMain: TFrmMain
       Hint = 'Cadastro de despesas em cart'#245'es de cr'#233'dito.'
       ImageIndex = 12
       ShortCut = 24643
+      OnExecute = NovaDespesaEmCartaoDeCredito
     end
     object ExibirTransacoesCmd: TAction
       Category = 'Transacoes'
@@ -4133,6 +4284,7 @@ object FrmMain: TFrmMain
       Hint = 'Exibe todas as transa'#231#245'es do sistema.'
       ImageIndex = 9
       ShortCut = 8276
+      OnExecute = ExibirTransacoes
     end
     object ExibirCartoesCmd: TAction
       Category = 'Cartoes'
@@ -4140,6 +4292,7 @@ object FrmMain: TFrmMain
       Hint = 'Exibe os cart'#245'es cadastrados no sistema.'
       ImageIndex = 6
       ShortCut = 8259
+      OnExecute = ExibirCartoes
     end
     object NovoCartaoDeCreditoCmd: TAction
       Category = 'Cartoes'
@@ -4147,6 +4300,7 @@ object FrmMain: TFrmMain
       Hint = 'Cadastro de cart'#245'es de cr'#233'dito.'
       ImageIndex = 15
       ShortCut = 41027
+      OnExecute = NovoCartaoDeCredito
     end
     object ExibirContasCmd: TAction
       Category = 'Contas'
@@ -4162,11 +4316,13 @@ object FrmMain: TFrmMain
       Hint = 'Cadastro de contas.'
       ImageIndex = 11
       ShortCut = 41038
+      OnExecute = NovaConta
     end
     object ReceitaMensalCmd: TAction
       Category = 'Relatorios'
       Caption = 'Receita Mensal'
       ImageIndex = 16
+      OnExecute = ReceitaMensal
     end
     object DespesaMensalCmd: TAction
       Category = 'Relatorios'
@@ -4209,6 +4365,7 @@ object FrmMain: TFrmMain
       Hint = 'Exibe a lista de or'#231'amentos cadastrados no sistema.'
       ImageIndex = 8
       ShortCut = 24655
+      OnExecute = ExibirOrcamentos
     end
     object AnalisarOrcamentosCmd: TAction
       Category = 'Orcamentos'
@@ -4216,6 +4373,7 @@ object FrmMain: TFrmMain
       Hint = 'Vis'#227'o das despesas realizadas e do or'#231'amento previsto.'
       ImageIndex = 1
       ShortCut = 8271
+      OnExecute = AnalisarOrcamentos
     end
     object CalculadoraCmd: TAction
       Category = 'Utilitarios'
@@ -4231,6 +4389,7 @@ object FrmMain: TFrmMain
       Hint = 'Abre o calend'#225'rio.'
       ImageIndex = 4
       ShortCut = 114
+      OnExecute = Calendario
     end
     object NavegadorCmd: TAction
       Category = 'Utilitarios'
@@ -4238,6 +4397,7 @@ object FrmMain: TFrmMain
       Hint = 'Abre o navegador padr'#227'o.'
       ImageIndex = 10
       ShortCut = 115
+      OnExecute = Navegador
     end
     object TopicosDaAjudaCmd: TAction
       Category = 'Ajuda'
@@ -4245,6 +4405,7 @@ object FrmMain: TFrmMain
       Hint = 'Abre a ajuda do sistema.'
       ImageIndex = 0
       ShortCut = 112
+      OnExecute = TopicosDaAjuda
     end
     object ContaDoSoftwareCmd: TAction
       Category = 'Ajuda'
@@ -4402,8 +4563,8 @@ object FrmMain: TFrmMain
   object UIIcons16: TImageList
     ColorDepth = cd32Bit
     DrawingStyle = dsTransparent
-    Left = 32
-    Top = 104
+    Left = 24
+    Top = 112
     Bitmap = {
       494C010113001800040010001000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000005000000001002000000000000050

@@ -2,7 +2,9 @@ program controlebancario;
 
 uses
   Vcl.Forms,
-  Main in 'Units\Main.pas' {FrmMain};
+  Main in 'Units\Main.pas' {FrmMain},
+  Vcl.Themes,
+  Vcl.Styles;
 
 {$R *.res}
 

@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, System.Actions, Vcl.ActnList,
   System.ImageList, Vcl.ImgList, Vcl.Menus,
-  Vcl.ActnMan, Vcl.StdStyleActnCtrls;
+  Vcl.ActnMan, Vcl.StdStyleActnCtrls, Vcl.ToolWin, Vcl.ComCtrls, Vcl.ActnCtrls,
+  Vcl.ExtCtrls;
 
 type
   TFrmMain = class(TForm)
@@ -92,12 +93,27 @@ type
     N2: TMenuItem;
     SobreItem: TMenuItem;
     UIIcons16: TImageList;
+    ActionToolBar1: TActionToolBar;
     procedure Sair(Sender: TObject);
     procedure NovaTransferencia(Sender: TObject);
     procedure Calculadora(Sender: TObject);
     procedure ExibirContas(Sender: TObject);
     procedure ResumoFinanceiro(Sender: TObject);
     procedure TiposDeContas(Sender: TObject);
+    procedure TopicosDaAjuda(Sender: TObject);
+    procedure Categorias(Sender: TObject);
+    procedure Bandeiras(Sender: TObject);
+    procedure ExibirCartoes(Sender: TObject);
+    procedure NovoCartaoDeCredito(Sender: TObject);
+    procedure NovaConta(Sender: TObject);
+    procedure ExibirOrcamentos(Sender: TObject);
+    procedure AnalisarOrcamentos(Sender: TObject);
+    procedure ReceitaMensal(Sender: TObject);
+    procedure NovaDespesaReceita(Sender: TObject);
+    procedure NovaDespesaEmCartaoDeCredito(Sender: TObject);
+    procedure ExibirTransacoes(Sender: TObject);
+    procedure Calendario(Sender: TObject);
+    procedure Navegador(Sender: TObject);
   private
     { Private declarations }
   public
@@ -111,7 +127,32 @@ implementation
 
 {$R *.dfm}
 
+procedure TFrmMain.AnalisarOrcamentos(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.Bandeiras(Sender: TObject);
+begin
+  //Do Something...
+end;
+
 procedure TFrmMain.Calculadora(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.Calendario(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.Categorias(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.ExibirCartoes(Sender: TObject);
 begin
   //Do Something...
 end;
@@ -121,7 +162,47 @@ begin
   //Do Something...
 end;
 
+procedure TFrmMain.ExibirOrcamentos(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.ExibirTransacoes(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.Navegador(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.NovaConta(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.NovaDespesaEmCartaoDeCredito(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.NovaDespesaReceita(Sender: TObject);
+begin
+  //Do Something...
+end;
+
 procedure TFrmMain.NovaTransferencia(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.NovoCartaoDeCredito(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.ReceitaMensal(Sender: TObject);
 begin
   //Do Something...
 end;
@@ -139,6 +220,11 @@ end;
 procedure TFrmMain.TiposDeContas(Sender: TObject);
 begin
   //Do something...
+end;
+
+procedure TFrmMain.TopicosDaAjuda(Sender: TObject);
+begin
+  //Do Something...
 end;
 
 end.
