@@ -132,6 +132,7 @@ type
     SpeedButton28: TSpeedButton;
     SpeedButton29: TSpeedButton;
     StatusBar: TStatusBar;
+    ActionToolBarBottom: TActionToolBar;
     procedure Sair(Sender: TObject);
     procedure NovaTransferencia(Sender: TObject);
     procedure Calculadora(Sender: TObject);

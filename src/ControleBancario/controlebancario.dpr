@@ -11,6 +11,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Windows10');
   Application.Title := 'Controle Bancário';
   Application.CreateForm(TFrmMain, FrmMain);
   Application.Run;
