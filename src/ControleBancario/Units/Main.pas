@@ -48,6 +48,31 @@ type
     SobreCmd: TAction;
     UIIcons16: TImageList;
     StatusBar: TStatusBar;
+    PCMenu: TPageControl;
+    TsPaginaInicial: TTabSheet;
+    TsTransacoes: TTabSheet;
+    TsCartoes: TTabSheet;
+    TsContas: TTabSheet;
+    TsRelatorios: TTabSheet;
+    TsOrcamentos: TTabSheet;
+    TsUtilitarios: TTabSheet;
+    TsAjuda: TTabSheet;
+    SpeedButton1: TSpeedButton;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    Label1: TLabel;
+    Panel3: TPanel;
+    SpeedButton4: TSpeedButton;
+    SpeedButton5: TSpeedButton;
+    SpeedButton6: TSpeedButton;
+    SpeedButton7: TSpeedButton;
+    Label2: TLabel;
+    Panel4: TPanel;
+    SpeedButton8: TSpeedButton;
+    SpeedButton9: TSpeedButton;
+    Panel5: TPanel;
     procedure Sair(Sender: TObject);
     procedure NovaTransferencia(Sender: TObject);
     procedure Calculadora(Sender: TObject);
@@ -68,6 +93,10 @@ type
     procedure ExibirTransacoes(Sender: TObject);
     procedure Calendario(Sender: TObject);
     procedure Navegador(Sender: TObject);
+    procedure PerfisDeUsuarios(Sender: TObject);
+    procedure UsuariosDoSistema(Sender: TObject);
+    procedure ConfiguracoesDoSistema(Sender: TObject);
+    procedure Logoff(Sender: TObject);
   private
     { Private declarations }
   public
@@ -106,6 +135,11 @@ begin
   //Do Something...
 end;
 
+procedure TFrmMain.ConfiguracoesDoSistema(Sender: TObject);
+begin
+  //Do Something...
+end;
+
 procedure TFrmMain.ExibirCartoes(Sender: TObject);
 begin
   //Do Something...
@@ -122,6 +156,11 @@ begin
 end;
 
 procedure TFrmMain.ExibirTransacoes(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.Logoff(Sender: TObject);
 begin
   //Do Something...
 end;
@@ -156,6 +195,11 @@ begin
   //Do Something...
 end;
 
+procedure TFrmMain.PerfisDeUsuarios(Sender: TObject);
+begin
+  //Do Something...
+end;
+
 procedure TFrmMain.ReceitaMensal(Sender: TObject);
 begin
   //Do Something...
@@ -179,6 +223,11 @@ end;
 procedure TFrmMain.TopicosDaAjuda(Sender: TObject);
 begin
   //Do Something...
+end;
+
+procedure TFrmMain.UsuariosDoSistema(Sender: TObject);
+begin
+  //Do something...
 end;
 
 end.
