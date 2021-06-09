@@ -72,7 +72,15 @@ type
     Panel4: TPanel;
     SpeedButton8: TSpeedButton;
     SpeedButton9: TSpeedButton;
+    PnlMenu: TPanel;
     Panel5: TPanel;
+    SpeedButton10: TSpeedButton;
+    SpeedButton11: TSpeedButton;
+    SpeedButton12: TSpeedButton;
+    SpeedButton13: TSpeedButton;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
     procedure Sair(Sender: TObject);
     procedure NovaTransferencia(Sender: TObject);
     procedure Calculadora(Sender: TObject);
@@ -97,6 +105,7 @@ type
     procedure UsuariosDoSistema(Sender: TObject);
     procedure ConfiguracoesDoSistema(Sender: TObject);
     procedure Logoff(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -158,6 +167,11 @@ end;
 procedure TFrmMain.ExibirTransacoes(Sender: TObject);
 begin
   //Do Something...
+end;
+
+procedure TFrmMain.FormCreate(Sender: TObject);
+begin
+  PCMenu.ActivePageIndex := 0;
 end;
 
 procedure TFrmMain.Logoff(Sender: TObject);

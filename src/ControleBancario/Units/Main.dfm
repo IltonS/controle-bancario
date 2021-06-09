@@ -2018,6 +2018,7 @@ object FrmMain: TFrmMain
   OldCreateOrder = False
   Position = poScreenCenter
   WindowState = wsMaximized
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object StatusBar: TStatusBar
@@ -2027,7 +2028,7 @@ object FrmMain: TFrmMain
     Height = 19
     Panels = <>
   end
-  object Panel5: TPanel
+  object PnlMenu: TPanel
     Left = 0
     Top = 0
     Width = 1065
@@ -2040,7 +2041,7 @@ object FrmMain: TFrmMain
       Top = 1
       Width = 1063
       Height = 126
-      ActivePage = TsPaginaInicial
+      ActivePage = TsTransacoes
       Align = alTop
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -2049,12 +2050,8 @@ object FrmMain: TFrmMain
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      ExplicitLeft = 2
-      ExplicitTop = 2
-      ExplicitWidth = 1061
       object TsPaginaInicial: TTabSheet
         Caption = '  P'#225'gina Inicial  '
-        ExplicitWidth = 1053
         object Panel1: TPanel
           Left = 0
           Top = 0
@@ -2078,6 +2075,19 @@ object FrmMain: TFrmMain
             Font.Name = 'Segoe UI'
             Font.Style = []
             Layout = blGlyphTop
+            ParentFont = False
+          end
+          object Label3: TLabel
+            Left = 40
+            Top = 76
+            Width = 41
+            Height = 13
+            Caption = 'Resumo'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
             ParentFont = False
           end
         end
@@ -2216,7 +2226,7 @@ object FrmMain: TFrmMain
         object Panel4: TPanel
           Left = 625
           Top = 0
-          Width = 192
+          Width = 168
           Height = 94
           Align = alLeft
           BevelEdges = [beRight]
@@ -2253,56 +2263,130 @@ object FrmMain: TFrmMain
             Layout = blGlyphTop
             ParentFont = False
           end
+          object Label4: TLabel
+            Left = 80
+            Top = 76
+            Width = 19
+            Height = 13
+            Caption = 'Sair'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
         end
       end
       object TsTransacoes: TTabSheet
         Caption = '  Transa'#231#245'es  '
         ImageIndex = 1
-        ExplicitTop = 32
-        ExplicitWidth = 1051
-        ExplicitHeight = 117
+        object Panel5: TPanel
+          Left = 0
+          Top = 0
+          Width = 489
+          Height = 94
+          Align = alLeft
+          BevelEdges = [beRight]
+          BevelKind = bkSoft
+          BevelOuter = bvNone
+          TabOrder = 0
+          object SpeedButton10: TSpeedButton
+            Left = 5
+            Top = 8
+            Width = 108
+            Height = 64
+            Action = ExibirTransacoesCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Layout = blGlyphTop
+            ParentFont = False
+          end
+          object SpeedButton11: TSpeedButton
+            Left = 327
+            Top = 8
+            Width = 154
+            Height = 32
+            Action = NovaDespesaReceitaCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+          object SpeedButton12: TSpeedButton
+            Left = 327
+            Top = 46
+            Width = 146
+            Height = 32
+            Action = NovaTransferenciaCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+          object SpeedButton13: TSpeedButton
+            Left = 119
+            Top = 8
+            Width = 202
+            Height = 64
+            Action = NovaDespesaEmCartaoDeCreditoCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Layout = blGlyphTop
+            ParentFont = False
+          end
+          object Label5: TLabel
+            Left = 192
+            Top = 76
+            Width = 56
+            Height = 13
+            Caption = 'Transa'#231#245'es'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+        end
       end
       object TsCartoes: TTabSheet
         Caption = '  Cart'#245'es  '
         ImageIndex = 2
-        ExplicitTop = 32
-        ExplicitWidth = 1051
-        ExplicitHeight = 117
       end
       object TsContas: TTabSheet
         Caption = '  Contas  '
         ImageIndex = 3
-        ExplicitTop = 32
-        ExplicitWidth = 1051
-        ExplicitHeight = 117
       end
       object TsRelatorios: TTabSheet
         Caption = '  Relat'#243'rios  '
         ImageIndex = 4
-        ExplicitTop = 32
-        ExplicitWidth = 1051
-        ExplicitHeight = 117
       end
       object TsOrcamentos: TTabSheet
         Caption = '  Or'#231'amentos  '
         ImageIndex = 5
-        ExplicitTop = 32
-        ExplicitWidth = 1051
-        ExplicitHeight = 117
       end
       object TsUtilitarios: TTabSheet
         Caption = '  Utilit'#225'rios  '
         ImageIndex = 6
-        ExplicitTop = 32
-        ExplicitWidth = 1051
-        ExplicitHeight = 117
       end
       object TsAjuda: TTabSheet
         Caption = '  Ajuda  '
         ImageIndex = 7
-        ExplicitTop = 32
-        ExplicitWidth = 1057
-        ExplicitHeight = 117
       end
     end
   end
@@ -2311,8 +2395,8 @@ object FrmMain: TFrmMain
     DrawingStyle = dsTransparent
     Height = 24
     Width = 24
-    Left = 352
-    Top = 192
+    Left = 96
+    Top = 144
     Bitmap = {
       494C01011A002800040018001800FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000060000000A8000000010020000000000000FC
@@ -4401,242 +4485,104 @@ object FrmMain: TFrmMain
       000000000000}
   end
   object ActionManager: TActionManager
-    ActionBars = <
-      item
-      end
-      item
-      end
-      item
-        Items = <
-          item
-            Caption = '-'
-          end
-          item
-            Action = ResumoFinanceiroCmd
-            ImageIndex = 17
-            ShortCut = 8274
-          end
-          item
-            Caption = '-'
-          end
-          item
-            Action = ExibirTransacoesCmd
-            ImageIndex = 9
-            ShortCut = 8276
-          end
-          item
-            Action = NovaTransferenciaCmd
-            ImageIndex = 14
-            ShowCaption = False
-            ShortCut = 24660
-          end
-          item
-            Action = NovaDespesaReceitaCmd
-            ImageIndex = 13
-            ShowCaption = False
-            ShortCut = 24644
-          end
-          item
-            Action = NovaDespesaEmCartaoDeCreditoCmd
-            ImageIndex = 12
-            ShowCaption = False
-            ShortCut = 24643
-          end
-          item
-            Caption = '-'
-          end
-          item
-            Action = ExibirContasCmd
-            Caption = 'Ex&ibir Contas'
-            ImageIndex = 7
-            ShortCut = 8270
-          end
-          item
-            Action = NovaContaCmd
-            Caption = 'N&ova Conta'
-            ImageIndex = 11
-            ShowCaption = False
-            ShortCut = 41038
-          end
-          item
-            Caption = '-'
-          end
-          item
-            Action = ExibirCartoesCmd
-            Caption = 'E&xibir Cart'#245'es'
-            ImageIndex = 6
-            ShortCut = 8259
-          end
-          item
-            Action = NovoCartaoDeCreditoCmd
-            ImageIndex = 15
-            ShowCaption = False
-            ShortCut = 41027
-          end
-          item
-            Caption = '-'
-          end
-          item
-            Action = ExibirOrcamentosCmd
-            Caption = 'Exibir Or'#231'a&mentos'
-            ImageIndex = 8
-            ShortCut = 24655
-          end
-          item
-            Action = AnalisarOrcamentosCmd
-            ImageIndex = 1
-            ShowCaption = False
-            ShortCut = 8271
-          end>
-      end
-      item
-        Items = <
-          item
-            Caption = '-'
-          end
-          item
-            Action = CalculadoraCmd
-            Caption = 'Ca&lculadora'
-            ImageIndex = 3
-            ShortCut = 113
-          end
-          item
-            Action = CalendarioCmd
-            ImageIndex = 4
-            ShortCut = 114
-          end
-          item
-            Action = NavegadorCmd
-            Caption = 'Na&vegador'
-            ImageIndex = 10
-            ShortCut = 115
-          end
-          item
-            Caption = '-'
-          end
-          item
-            Action = CategoriasCmd
-            ImageIndex = 5
-            ShowCaption = False
-          end
-          item
-            Action = BandeirasCmd
-            ImageIndex = 2
-            ShowCaption = False
-          end
-          item
-            Action = TiposDeContasCmd
-            ImageIndex = 18
-            ShowCaption = False
-          end
-          item
-            Caption = '-'
-          end
-          item
-            Action = TopicosDaAjudaCmd
-            Caption = 'T'#243'&picos da Ajuda'
-            ImageIndex = 0
-            ShortCut = 112
-          end>
-      end>
     Images = UIIcons24
-    Left = 424
-    Top = 192
+    Left = 32
+    Top = 200
     StyleName = 'Standard'
     object ResumoFinanceiroCmd: TAction
-      Category = 'Arquivo'
-      Caption = 'Resumo &Financeiro'
+      Category = 'PaginaInicial'
+      Caption = 'Resumo Financeiro'
       Hint = 'Resumo com as receitas e despesas dos '#250'ltimos meses.'
       ImageIndex = 21
       ShortCut = 8274
       OnExecute = ResumoFinanceiro
     end
     object PerfisDeUsuariosCmd: TAction
-      Category = 'Arquivo'
-      Caption = '&Perfis de Usu'#225'rios'
+      Category = 'PaginaInicial'
+      Caption = 'Perfis de Usu'#225'rios'
       Hint = 'Configurar perfis de usu'#225'rios.'
       ImageIndex = 19
       OnExecute = PerfisDeUsuarios
     end
     object UsuariosDoSistemaCmd: TAction
-      Category = 'Arquivo'
-      Caption = '&Usu'#225'rios do Sistema'
+      Category = 'PaginaInicial'
+      Caption = 'Usu'#225'rios do Sistema'
       Hint = 'Manuten'#231#227'o do cadastro de usu'#225'rios do sistema.'
       ImageIndex = 25
       OnExecute = UsuariosDoSistema
     end
     object CategoriasCmd: TAction
-      Category = 'Arquivo'
-      Caption = '&Categorias'
+      Category = 'PaginaInicial'
+      Caption = 'Categorias'
       Hint = 'Controle das categorias das transa'#231#245'es do sistema.'
       ImageIndex = 5
       OnExecute = Categorias
     end
     object BandeirasCmd: TAction
-      Category = 'Arquivo'
-      Caption = '&Bandeiras'
+      Category = 'PaginaInicial'
+      Caption = 'Bandeiras'
       Hint = 'Controle das bandeiras de cart'#245'es de cr'#233'dito do sistema.'
       ImageIndex = 2
       OnExecute = Bandeiras
     end
     object TiposDeContasCmd: TAction
-      Category = 'Arquivo'
-      Caption = '&Tipos de Contas'
+      Category = 'PaginaInicial'
+      Caption = 'Tipos de Contas'
       Hint = 'Controle dos tipos de contas do sistema.'
       ImageIndex = 24
       OnExecute = TiposDeContas
     end
     object ConfiguracoesDoSistemaCmd: TAction
-      Category = 'Arquivo'
-      Caption = 'C&onfigura'#231#245'es do Sistema'
+      Category = 'PaginaInicial'
+      Caption = 'Configura'#231#245'es do Sistema'
       Hint = 'Configura'#231#245'es gerais do sistema.'
       ImageIndex = 6
       OnExecute = ConfiguracoesDoSistema
     end
     object LogoffCmd: TAction
-      Category = 'Arquivo'
-      Caption = '&Logoff'
+      Category = 'PaginaInicial'
+      Caption = 'Logoff'
       Hint = 'Fazer logoff do usu'#225'rio atual.'
       ImageIndex = 12
       ShortCut = 8268
       OnExecute = Logoff
     end
     object SairCmd: TAction
-      Category = 'Arquivo'
-      Caption = '&Sair'
+      Category = 'PaginaInicial'
+      Caption = 'Sair'
       Hint = 'Sair do programa.'
       ImageIndex = 22
       OnExecute = Sair
     end
     object NovaTransferenciaCmd: TAction
       Category = 'Transacoes'
-      Caption = 'Nova T&ransfer'#234'ncia'
+      Caption = 'Nova Transfer'#234'ncia'
       Hint = 'Cadastro de transfer'#234'ncias entre contas.'
-      ImageIndex = 14
+      ImageIndex = 17
       ShortCut = 24660
       OnExecute = NovaTransferencia
     end
     object NovaDespesaReceitaCmd: TAction
       Category = 'Transacoes'
-      Caption = 'Nova &Despesa/Receita'
+      Caption = 'Nova Despesa/Receita'
       Hint = 'Cadastro de despesas e receitas em uma conta.'
-      ImageIndex = 13
+      ImageIndex = 16
       ShortCut = 24644
       OnExecute = NovaDespesaReceita
     end
     object NovaDespesaEmCartaoDeCreditoCmd: TAction
       Category = 'Transacoes'
-      Caption = 'Nova Despesa em &Cart'#227'o de Cr'#233'dito'
+      Caption = 'Nova Despesa em Cart'#227'o de Cr'#233'dito'
       Hint = 'Cadastro de despesas em cart'#245'es de cr'#233'dito.'
-      ImageIndex = 12
+      ImageIndex = 15
       ShortCut = 24643
       OnExecute = NovaDespesaEmCartaoDeCredito
     end
     object ExibirTransacoesCmd: TAction
       Category = 'Transacoes'
-      Caption = '&Exibir Transa'#231#245'es'
+      Caption = 'Exibir Transa'#231#245'es'
       Hint = 'Exibe todas as transa'#231#245'es do sistema.'
-      ImageIndex = 9
+      ImageIndex = 11
       ShortCut = 8276
       OnExecute = ExibirTransacoes
     end
@@ -4776,8 +4722,8 @@ object FrmMain: TFrmMain
   object UIIcons16: TImageList
     ColorDepth = cd32Bit
     DrawingStyle = dsTransparent
-    Left = 280
-    Top = 192
+    Left = 32
+    Top = 144
     Bitmap = {
       494C01011A002800040010001000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000007000000001002000000000000070
