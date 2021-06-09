@@ -51,8 +51,7 @@ type
     PCMenu: TPageControl;
     TsPaginaInicial: TTabSheet;
     TsTransacoes: TTabSheet;
-    TsCartoes: TTabSheet;
-    TsContas: TTabSheet;
+    TsBanco: TTabSheet;
     TsRelatorios: TTabSheet;
     TsOrcamentos: TTabSheet;
     TsUtilitarios: TTabSheet;
@@ -81,6 +80,44 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    Panel6: TPanel;
+    SpeedButton14: TSpeedButton;
+    SpeedButton15: TSpeedButton;
+    Label6: TLabel;
+    Panel7: TPanel;
+    SpeedButton16: TSpeedButton;
+    SpeedButton17: TSpeedButton;
+    Label7: TLabel;
+    Panel8: TPanel;
+    SpeedButton18: TSpeedButton;
+    Label8: TLabel;
+    Panel9: TPanel;
+    Panel10: TPanel;
+    Panel11: TPanel;
+    SpeedButton20: TSpeedButton;
+    SpeedButton21: TSpeedButton;
+    SpeedButton19: TSpeedButton;
+    SpeedButton22: TSpeedButton;
+    SpeedButton23: TSpeedButton;
+    Label9: TLabel;
+    SpeedButton24: TSpeedButton;
+    Label10: TLabel;
+    SpeedButton25: TSpeedButton;
+    Label11: TLabel;
+    Panel12: TPanel;
+    SpeedButton26: TSpeedButton;
+    SpeedButton27: TSpeedButton;
+    Label12: TLabel;
+    Panel13: TPanel;
+    SpeedButton28: TSpeedButton;
+    SpeedButton29: TSpeedButton;
+    SpeedButton30: TSpeedButton;
+    Label13: TLabel;
+    Panel14: TPanel;
+    SpeedButton31: TSpeedButton;
+    SpeedButton32: TSpeedButton;
+    SpeedButton33: TSpeedButton;
+    Label14: TLabel;
     procedure Sair(Sender: TObject);
     procedure NovaTransferencia(Sender: TObject);
     procedure Calculadora(Sender: TObject);
@@ -106,6 +143,15 @@ type
     procedure ConfiguracoesDoSistema(Sender: TObject);
     procedure Logoff(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure DespesaMensal(Sender: TObject);
+    procedure ReceitaPorCategoria(Sender: TObject);
+    procedure DespesaPorCategoria(Sender: TObject);
+    procedure ReceitaPorConta(Sender: TObject);
+    procedure DespesaPorConta(Sender: TObject);
+    procedure ReceitaAnual(Sender: TObject);
+    procedure DespesaAnual(Sender: TObject);
+    procedure ContaDoSoftware(Sender: TObject);
+    procedure Sobre(Sender: TObject);
   private
     { Private declarations }
   public
@@ -145,6 +191,31 @@ begin
 end;
 
 procedure TFrmMain.ConfiguracoesDoSistema(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.ContaDoSoftware(Sender: TObject);
+begin
+ //Do Something...
+end;
+
+procedure TFrmMain.DespesaAnual(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.DespesaMensal(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.DespesaPorCategoria(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.DespesaPorConta(Sender: TObject);
 begin
   //Do Something...
 end;
@@ -214,7 +285,22 @@ begin
   //Do Something...
 end;
 
+procedure TFrmMain.ReceitaAnual(Sender: TObject);
+begin
+  //Do Something...
+end;
+
 procedure TFrmMain.ReceitaMensal(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.ReceitaPorCategoria(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.ReceitaPorConta(Sender: TObject);
 begin
   //Do Something...
 end;
@@ -227,6 +313,11 @@ end;
 procedure TFrmMain.Sair(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TFrmMain.Sobre(Sender: TObject);
+begin
+ //Do Something...
 end;
 
 procedure TFrmMain.TiposDeContas(Sender: TObject);

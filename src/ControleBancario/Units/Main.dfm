@@ -2041,7 +2041,7 @@ object FrmMain: TFrmMain
       Top = 1
       Width = 1063
       Height = 126
-      ActivePage = TsTransacoes
+      ActivePage = TsAjuda
       Align = alTop
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -2226,7 +2226,7 @@ object FrmMain: TFrmMain
         object Panel4: TPanel
           Left = 625
           Top = 0
-          Width = 168
+          Width = 176
           Height = 94
           Align = alLeft
           BevelEdges = [beRight]
@@ -2364,29 +2364,538 @@ object FrmMain: TFrmMain
           end
         end
       end
-      object TsCartoes: TTabSheet
-        Caption = '  Cart'#245'es  '
+      object TsBanco: TTabSheet
+        Caption = '  Banco  '
         ImageIndex = 2
-      end
-      object TsContas: TTabSheet
-        Caption = '  Contas  '
-        ImageIndex = 3
+        object Panel7: TPanel
+          Left = 0
+          Top = 0
+          Width = 233
+          Height = 94
+          Align = alLeft
+          BevelEdges = [beRight]
+          BevelKind = bkSoft
+          BevelOuter = bvNone
+          TabOrder = 0
+          object SpeedButton16: TSpeedButton
+            Left = 5
+            Top = 8
+            Width = 108
+            Height = 64
+            Action = ExibirContasCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Layout = blGlyphTop
+            ParentFont = False
+          end
+          object SpeedButton17: TSpeedButton
+            Left = 119
+            Top = 8
+            Width = 98
+            Height = 64
+            Action = NovaContaCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Layout = blGlyphTop
+            ParentFont = False
+          end
+          object Label7: TLabel
+            Left = 96
+            Top = 78
+            Width = 36
+            Height = 13
+            Caption = 'Contas'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+        end
+        object Panel6: TPanel
+          Left = 233
+          Top = 0
+          Width = 288
+          Height = 94
+          Align = alLeft
+          BevelEdges = [beRight]
+          BevelKind = bkSoft
+          BevelOuter = bvNone
+          TabOrder = 1
+          ExplicitLeft = 265
+          object SpeedButton14: TSpeedButton
+            Left = 5
+            Top = 8
+            Width = 121
+            Height = 64
+            Action = ExibirCartoesCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Layout = blGlyphTop
+            ParentFont = False
+          end
+          object SpeedButton15: TSpeedButton
+            Left = 132
+            Top = 8
+            Width = 137
+            Height = 64
+            Action = NovoCartaoDeCreditoCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Layout = blGlyphTop
+            ParentFont = False
+          end
+          object Label6: TLabel
+            Left = 120
+            Top = 78
+            Width = 39
+            Height = 13
+            Caption = 'Cart'#245'es'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+        end
       end
       object TsRelatorios: TTabSheet
         Caption = '  Relat'#243'rios  '
         ImageIndex = 4
+        ExplicitLeft = 8
+        ExplicitTop = 32
+        object Panel8: TPanel
+          Left = 0
+          Top = 0
+          Width = 217
+          Height = 94
+          Align = alLeft
+          BevelEdges = [beRight]
+          BevelKind = bkSoft
+          BevelOuter = bvNone
+          TabOrder = 0
+          object SpeedButton18: TSpeedButton
+            Left = 5
+            Top = 8
+            Width = 92
+            Height = 64
+            Action = ReceitaMensalCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Layout = blGlyphTop
+            ParentFont = False
+          end
+          object Label8: TLabel
+            Left = 90
+            Top = 76
+            Width = 37
+            Height = 13
+            Caption = 'Mensal'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+          object SpeedButton22: TSpeedButton
+            Left = 104
+            Top = 8
+            Width = 92
+            Height = 64
+            Action = DespesaMensalCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Layout = blGlyphTop
+            ParentFont = False
+          end
+        end
+        object Panel9: TPanel
+          Left = 217
+          Top = 0
+          Width = 200
+          Height = 94
+          Align = alLeft
+          BevelEdges = [beRight]
+          BevelKind = bkSoft
+          BevelOuter = bvNone
+          TabOrder = 1
+          object SpeedButton20: TSpeedButton
+            Left = 6
+            Top = 8
+            Width = 155
+            Height = 32
+            Action = ReceitasPorCategoriaCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+          object SpeedButton23: TSpeedButton
+            Left = 6
+            Top = 46
+            Width = 163
+            Height = 32
+            Action = DespesasPorCategoriaCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+          object Label9: TLabel
+            Left = 74
+            Top = 76
+            Width = 55
+            Height = 13
+            Caption = 'Categorias'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+        end
+        object Panel10: TPanel
+          Left = 585
+          Top = 0
+          Width = 224
+          Height = 94
+          Align = alLeft
+          BevelEdges = [beRight]
+          BevelKind = bkSoft
+          BevelOuter = bvNone
+          TabOrder = 2
+          object SpeedButton19: TSpeedButton
+            Left = 6
+            Top = 8
+            Width = 97
+            Height = 64
+            Action = ReceitaAnualCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Layout = blGlyphTop
+            ParentFont = False
+          end
+          object SpeedButton25: TSpeedButton
+            Left = 109
+            Top = 8
+            Width = 97
+            Height = 64
+            Action = DespesaAnualCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Layout = blGlyphTop
+            ParentFont = False
+          end
+          object Label11: TLabel
+            Left = 98
+            Top = 78
+            Width = 30
+            Height = 13
+            Caption = 'Anual'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+        end
+        object Panel11: TPanel
+          Left = 417
+          Top = 0
+          Width = 168
+          Height = 94
+          Align = alLeft
+          BevelEdges = [beRight]
+          BevelKind = bkSoft
+          BevelOuter = bvNone
+          TabOrder = 3
+          object SpeedButton21: TSpeedButton
+            Left = 6
+            Top = 8
+            Width = 131
+            Height = 32
+            Action = ReceitasPorContaCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+          object SpeedButton24: TSpeedButton
+            Left = 6
+            Top = 46
+            Width = 139
+            Height = 32
+            Action = DespesasPorContaCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+          object Label10: TLabel
+            Left = 74
+            Top = 76
+            Width = 36
+            Height = 13
+            Caption = 'Contas'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+        end
       end
       object TsOrcamentos: TTabSheet
         Caption = '  Or'#231'amentos  '
         ImageIndex = 5
+        object Panel12: TPanel
+          Left = 0
+          Top = 0
+          Width = 257
+          Height = 94
+          Align = alLeft
+          BevelEdges = [beRight]
+          BevelKind = bkSoft
+          BevelOuter = bvNone
+          TabOrder = 0
+          object SpeedButton26: TSpeedButton
+            Left = 5
+            Top = 8
+            Width = 102
+            Height = 64
+            Action = ExibirOrcamentosCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Layout = blGlyphTop
+            ParentFont = False
+          end
+          object SpeedButton27: TSpeedButton
+            Left = 125
+            Top = 8
+            Width = 116
+            Height = 64
+            Action = AnalisarOrcamentosCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Layout = blGlyphTop
+            ParentFont = False
+          end
+          object Label12: TLabel
+            Left = 96
+            Top = 78
+            Width = 62
+            Height = 13
+            Caption = 'Or'#231'amentos'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+        end
       end
       object TsUtilitarios: TTabSheet
         Caption = '  Utilit'#225'rios  '
         ImageIndex = 6
+        object Panel13: TPanel
+          Left = 0
+          Top = 0
+          Width = 337
+          Height = 94
+          Align = alLeft
+          BevelEdges = [beRight]
+          BevelKind = bkSoft
+          BevelOuter = bvNone
+          TabOrder = 0
+          object SpeedButton28: TSpeedButton
+            Left = 5
+            Top = 8
+            Width = 102
+            Height = 64
+            Action = CalculadoraCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Layout = blGlyphTop
+            ParentFont = False
+          end
+          object SpeedButton29: TSpeedButton
+            Left = 113
+            Top = 8
+            Width = 102
+            Height = 64
+            Action = CalendarioCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Layout = blGlyphTop
+            ParentFont = False
+          end
+          object SpeedButton30: TSpeedButton
+            Left = 221
+            Top = 8
+            Width = 102
+            Height = 64
+            Action = NavegadorCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Layout = blGlyphTop
+            ParentFont = False
+          end
+          object Label13: TLabel
+            Left = 137
+            Top = 78
+            Width = 50
+            Height = 13
+            Caption = 'Utilit'#225'rios'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+        end
       end
       object TsAjuda: TTabSheet
         Caption = '  Ajuda  '
         ImageIndex = 7
+        object Panel14: TPanel
+          Left = 0
+          Top = 0
+          Width = 297
+          Height = 94
+          Align = alLeft
+          BevelEdges = [beRight]
+          BevelKind = bkSoft
+          BevelOuter = bvNone
+          TabOrder = 0
+          object SpeedButton31: TSpeedButton
+            Left = 5
+            Top = 8
+            Width = 102
+            Height = 64
+            Action = TopicosDaAjudaCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Layout = blGlyphTop
+            ParentFont = False
+          end
+          object SpeedButton32: TSpeedButton
+            Left = 126
+            Top = 8
+            Width = 147
+            Height = 32
+            Action = ContaDoSoftwareCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+          object SpeedButton33: TSpeedButton
+            Left = 126
+            Top = 46
+            Width = 83
+            Height = 32
+            Action = SobreCmd
+            Flat = True
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+          object Label14: TLabel
+            Left = 104
+            Top = 76
+            Width = 30
+            Height = 13
+            Caption = 'Ajuda'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+        end
       end
     end
   end
@@ -4587,89 +5096,96 @@ object FrmMain: TFrmMain
       OnExecute = ExibirTransacoes
     end
     object ExibirCartoesCmd: TAction
-      Category = 'Cartoes'
-      Caption = '&Exibir Cart'#245'es'
+      Category = 'Banco'
+      Caption = 'Exibir Cart'#245'es'
       Hint = 'Exibe os cart'#245'es cadastrados no sistema.'
-      ImageIndex = 6
+      ImageIndex = 8
       ShortCut = 8259
       OnExecute = ExibirCartoes
     end
     object NovoCartaoDeCreditoCmd: TAction
-      Category = 'Cartoes'
-      Caption = '&Novo Cart'#227'o de Cr'#233'dito'
+      Category = 'Banco'
+      Caption = 'Novo Cart'#227'o de Cr'#233'dito'
       Hint = 'Cadastro de cart'#245'es de cr'#233'dito.'
-      ImageIndex = 15
+      ImageIndex = 18
       ShortCut = 41027
       OnExecute = NovoCartaoDeCredito
     end
     object ExibirContasCmd: TAction
-      Category = 'Contas'
-      Caption = '&Exibir Contas'
+      Category = 'Banco'
+      Caption = 'Exibir Contas'
       Hint = 'Exibe as contas cadastradas no sistema.'
-      ImageIndex = 7
+      ImageIndex = 9
       ShortCut = 8270
       OnExecute = ExibirContas
     end
     object NovaContaCmd: TAction
-      Category = 'Contas'
-      Caption = '&Nova Conta'
+      Category = 'Banco'
+      Caption = 'Nova Conta'
       Hint = 'Cadastro de contas.'
-      ImageIndex = 11
+      ImageIndex = 14
       ShortCut = 41038
       OnExecute = NovaConta
     end
     object ReceitaMensalCmd: TAction
       Category = 'Relatorios'
       Caption = 'Receita Mensal'
-      ImageIndex = 16
+      ImageIndex = 20
       OnExecute = ReceitaMensal
     end
     object DespesaMensalCmd: TAction
       Category = 'Relatorios'
       Caption = 'Despesa Mensal'
-      ImageIndex = 16
+      ImageIndex = 20
+      OnExecute = DespesaMensal
     end
     object ReceitasPorCategoriaCmd: TAction
       Category = 'Relatorios'
       Caption = 'Receitas Por Categoria'
-      ImageIndex = 16
+      ImageIndex = 20
+      OnExecute = ReceitaPorCategoria
     end
     object DespesasPorCategoriaCmd: TAction
       Category = 'Relatorios'
       Caption = 'Despesas Por Categoria'
-      ImageIndex = 16
+      ImageIndex = 20
+      OnExecute = DespesaPorCategoria
     end
     object ReceitasPorContaCmd: TAction
       Category = 'Relatorios'
       Caption = 'Receitas Por Conta'
-      ImageIndex = 16
+      ImageIndex = 20
+      OnExecute = ReceitaPorConta
     end
     object DespesasPorContaCmd: TAction
       Category = 'Relatorios'
       Caption = 'Despesas Por Conta'
-      ImageIndex = 16
+      ImageIndex = 20
+      OnExecute = DespesaPorConta
     end
     object ReceitaAnualCmd: TAction
       Category = 'Relatorios'
       Caption = 'Receita Anual'
-      ImageIndex = 16
+      ImageIndex = 20
+      OnExecute = ReceitaAnual
     end
     object DespesaAnualCmd: TAction
       Category = 'Relatorios'
       Caption = 'Despesa Anual'
-      ImageIndex = 16
+      ImageIndex = 20
+      OnExecute = DespesaAnual
     end
     object ExibirOrcamentosCmd: TAction
       Category = 'Orcamentos'
-      Caption = '&Exibir Or'#231'amentos'
+      Caption = 'Exibir Or'#231'amentos'
       Hint = 'Exibe a lista de or'#231'amentos cadastrados no sistema.'
-      ImageIndex = 8
+      ImageIndex = 10
       ShortCut = 24655
       OnExecute = ExibirOrcamentos
     end
     object AnalisarOrcamentosCmd: TAction
       Category = 'Orcamentos'
-      Caption = '&Analisar Or'#231'amentos'
+      Caption = 'Analisar Or'#231'amentos'
       Hint = 'Vis'#227'o das despesas realizadas e do or'#231'amento previsto.'
       ImageIndex = 1
       ShortCut = 8271
@@ -4677,7 +5193,7 @@ object FrmMain: TFrmMain
     end
     object CalculadoraCmd: TAction
       Category = 'Utilitarios'
-      Caption = '&Calculadora'
+      Caption = 'Calculadora'
       Hint = 'Abre a calculadora.'
       ImageIndex = 3
       ShortCut = 113
@@ -4685,7 +5201,7 @@ object FrmMain: TFrmMain
     end
     object CalendarioCmd: TAction
       Category = 'Utilitarios'
-      Caption = 'C&alend'#225'rio'
+      Caption = 'Calend'#225'rio'
       Hint = 'Abre o calend'#225'rio.'
       ImageIndex = 4
       ShortCut = 114
@@ -4693,15 +5209,15 @@ object FrmMain: TFrmMain
     end
     object NavegadorCmd: TAction
       Category = 'Utilitarios'
-      Caption = '&Navegador'
+      Caption = 'Navegador'
       Hint = 'Abre o navegador padr'#227'o.'
-      ImageIndex = 10
+      ImageIndex = 13
       ShortCut = 115
       OnExecute = Navegador
     end
     object TopicosDaAjudaCmd: TAction
       Category = 'Ajuda'
-      Caption = '&T'#243'picos da Ajuda'
+      Caption = 'T'#243'picos da Ajuda'
       Hint = 'Abre a ajuda do sistema.'
       ImageIndex = 0
       ShortCut = 112
@@ -4709,14 +5225,18 @@ object FrmMain: TFrmMain
     end
     object ContaDoSoftwareCmd: TAction
       Category = 'Ajuda'
-      Caption = '&Conta do Software'
+      Caption = 'Conta do Software'
+      ImageIndex = 7
       ShortCut = 16496
+      OnExecute = ContaDoSoftware
     end
     object SobreCmd: TAction
       Category = 'Ajuda'
-      Caption = '&Sobre'
+      Caption = 'Sobre'
       Hint = 'Exibe informa'#231#245'es sobre o software.'
+      ImageIndex = 23
       ShortCut = 24688
+      OnExecute = Sobre
     end
   end
   object UIIcons16: TImageList
