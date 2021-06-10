@@ -46,7 +46,6 @@ type
     TopicosDaAjudaCmd: TAction;
     ContaDoSoftwareCmd: TAction;
     SobreCmd: TAction;
-    UIIcons16: TImageList;
     StatusBar: TStatusBar;
     PCMenu: TPageControl;
     TsPaginaInicial: TTabSheet;
@@ -118,6 +117,15 @@ type
     SpeedButton32: TSpeedButton;
     SpeedButton33: TSpeedButton;
     Label14: TLabel;
+    TsManutencao: TTabSheet;
+    CriarBackupCmd: TAction;
+    RestaurarBackupCmd: TAction;
+    RecriarBancoDeDadosCmd: TAction;
+    Panel15: TPanel;
+    SpeedButton34: TSpeedButton;
+    SpeedButton35: TSpeedButton;
+    SpeedButton36: TSpeedButton;
+    Label15: TLabel;
     procedure Sair(Sender: TObject);
     procedure NovaTransferencia(Sender: TObject);
     procedure Calculadora(Sender: TObject);
@@ -152,6 +160,9 @@ type
     procedure DespesaAnual(Sender: TObject);
     procedure ContaDoSoftware(Sender: TObject);
     procedure Sobre(Sender: TObject);
+    procedure CriarBackup(Sender: TObject);
+    procedure RestaurarBackup(Sender: TObject);
+    procedure RecriarBancoDeDados(Sender: TObject);
   private
     { Private declarations }
   public
@@ -198,6 +209,11 @@ end;
 procedure TFrmMain.ContaDoSoftware(Sender: TObject);
 begin
  //Do Something...
+end;
+
+procedure TFrmMain.CriarBackup(Sender: TObject);
+begin
+  //Do Something...                     //Do Something...
 end;
 
 procedure TFrmMain.DespesaAnual(Sender: TObject);
@@ -301,6 +317,16 @@ begin
 end;
 
 procedure TFrmMain.ReceitaPorConta(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.RecriarBancoDeDados(Sender: TObject);
+begin
+  //Do Something...
+end;
+
+procedure TFrmMain.RestaurarBackup(Sender: TObject);
 begin
   //Do Something...
 end;
