@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, System.Actions, Vcl.ActnList,
   System.ImageList, Vcl.ImgList, Vcl.Menus,
   Vcl.ActnMan, Vcl.StdStyleActnCtrls, Vcl.ToolWin, Vcl.ComCtrls, Vcl.ActnCtrls,
-  Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons;
+  Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons, ShellAPI, Vcl.AppEvnts;
 
 type
   TFrmMain = class(TForm)
@@ -126,6 +126,8 @@ type
     SpeedButton35: TSpeedButton;
     SpeedButton36: TSpeedButton;
     Label15: TLabel;
+    Timer: TTimer;
+    ApplicationEvents: TApplicationEvents;
     procedure Sair(Sender: TObject);
     procedure NovaTransferencia(Sender: TObject);
     procedure Calculadora(Sender: TObject);
@@ -163,6 +165,9 @@ type
     procedure CriarBackup(Sender: TObject);
     procedure RestaurarBackup(Sender: TObject);
     procedure RecriarBancoDeDados(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure TimerTimer(Sender: TObject);
+    procedure ApplicationEventsHint(Sender: TObject);
   private
     { Private declarations }
   public
@@ -179,6 +184,11 @@ implementation
 procedure TFrmMain.AnalisarOrcamentos(Sender: TObject);
 begin
   //Do Something...
+end;
+
+procedure TFrmMain.ApplicationEventsHint(Sender: TObject);
+begin
+  StatusBar.Panels[3].Text := Application.Hint;
 end;
 
 procedure TFrmMain.Bandeiras(Sender: TObject);
@@ -256,6 +266,12 @@ begin
   //Do Something...
 end;
 
+procedure TFrmMain.FormActivate(Sender: TObject);
+begin
+  StatusBar.Panels[0].Text := ' ' + FormatDateTime(' hh:nn:ss', Now);
+  StatusBar.Panels[1].Text := FormatDateTime(' dddd ", " dd " de " mmmm " de " yyyy', Now);
+end;
+
 procedure TFrmMain.FormCreate(Sender: TObject);
 begin
   PCMenu.ActivePageIndex := 0;
@@ -268,7 +284,7 @@ end;
 
 procedure TFrmMain.Navegador(Sender: TObject);
 begin
-  //Do Something...
+  ShellExecute(0, nil,'cmd', PChar('/C start microsoft-edge:https://bing.com'), '', SW_NORMAL);
 end;
 
 procedure TFrmMain.NovaConta(Sender: TObject);
@@ -344,6 +360,12 @@ end;
 procedure TFrmMain.Sobre(Sender: TObject);
 begin
  //Do Something...
+end;
+
+procedure TFrmMain.TimerTimer(Sender: TObject);
+begin
+  StatusBar.Panels[0].Text := ' ' + FormatDateTime(' hh:nn:ss', Now);
+  StatusBar.Panels[1].Text := FormatDateTime(' dddd ", " dd " de " mmmm " de " yyyy', Now);
 end;
 
 procedure TFrmMain.TiposDeContas(Sender: TObject);

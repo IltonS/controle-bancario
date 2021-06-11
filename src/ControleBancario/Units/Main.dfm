@@ -2018,15 +2018,28 @@ object FrmMain: TFrmMain
   OldCreateOrder = False
   Position = poScreenCenter
   WindowState = wsMaximized
+  OnActivate = FormActivate
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object StatusBar: TStatusBar
     Left = 0
-    Top = 371
+    Top = 368
     Width = 1065
-    Height = 19
-    Panels = <>
+    Height = 22
+    Panels = <
+      item
+        Width = 60
+      end
+      item
+        Width = 220
+      end
+      item
+        Width = 230
+      end
+      item
+        Width = 50
+      end>
   end
   object PnlMenu: TPanel
     Left = 0
@@ -2041,7 +2054,7 @@ object FrmMain: TFrmMain
       Top = 1
       Width = 1063
       Height = 126
-      ActivePage = TsAjuda
+      ActivePage = TsPaginaInicial
       Align = alTop
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -2049,7 +2062,11 @@ object FrmMain: TFrmMain
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 0
+      ExplicitLeft = 2
+      ExplicitTop = 0
       object TsPaginaInicial: TTabSheet
         Caption = '  P'#225'gina Inicial  '
         object Panel1: TPanel
@@ -6169,7 +6186,7 @@ object FrmMain: TFrmMain
     object NavegadorCmd: TAction
       Category = 'Utilitarios'
       Caption = 'Navegador'
-      Hint = 'Abre o navegador padr'#227'o.'
+      Hint = 'Abre o navegador Edge.'
       ImageIndex = 18
       ShortCut = 115
       OnExecute = Navegador
@@ -6220,5 +6237,15 @@ object FrmMain: TFrmMain
       ImageIndex = 29
       OnExecute = RecriarBancoDeDados
     end
+  end
+  object Timer: TTimer
+    OnTimer = TimerTimer
+    Left = 120
+    Top = 144
+  end
+  object ApplicationEvents: TApplicationEvents
+    OnHint = ApplicationEventsHint
+    Left = 120
+    Top = 200
   end
 end
